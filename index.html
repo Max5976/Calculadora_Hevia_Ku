@@ -10,27 +10,30 @@
 
     <section class="calculadora">
         <p><input type="text" id="Pantalla" readonly></p>
-
         <section class="botones">
             <input type="button" class="btnArriba" id="M+" value="M+" onclick="guardarResultado()">
-            <input type="button" class="btnArriba" id="M" value="M">
-            <input type="button" class="btn" id="Uno" value="1" onclick="guardarValor('1')">
-            <input type="button" class="btn" id="Dos" value="2" onclick="guardarValor('2')">
-            <input type="button" class="btn" id="Tres" value="3" onclick="guardarValor('3')">
-            <input type="button" class="btnEspecial" id="Sumar" value="+" onclick="guardarValor('+')">
-            <input type="button" class="btn" id="Cuatro" value="4" onclick="guardarValor('4')">
-            <input type="button" class="btn" id="Cinco" value="5" onclick="guardarValor('5')">
-            <input type="button" class="btn" id="Seis" value="6" onclick="guardarValor('6')">
-            <input type="button" class="btnEspecial" id="Menos" value="-" onclick="guardarValor('-')">
+            <input type="button" class="btnArriba" id="M" value="M" onclick="usarMemoria()">
+            <div></div>
+            <div></div>
             <input type="button" class="btn" id="Siete" value="7" onclick="guardarValor('7')">
             <input type="button" class="btn" id="Ocho" value="8" onclick="guardarValor('8')">
             <input type="button" class="btn" id="Nueve" value="9" onclick="guardarValor('9')">
-            <input type="button" class="btnEspecial" id="Multiplicar" value="x" onclick="guardarValor('*')">
-            <input type="button" class="btn" id="Cero" value="0" onclick="guardarValor('0')">
-            <input type="button" class="btnEspecial" id="Igual" value="=" onclick="calcular()">
             <input type="button" class="btnEspecial" id="Dividir" value="/" onclick="guardarValor('/')">
-            <input type="button" class="btnEspecial" id="BorrarUltimoDigito" value="<=">
+            <input type="button" class="btn" id="Cuatro" value="4" onclick="guardarValor('4')">
+            <input type="button" class="btn" id="Cinco" value="5" onclick="guardarValor('5')">
+            <input type="button" class="btn" id="Seis" value="6" onclick="guardarValor('6')">
+            <input type="button" class="btnEspecial" id="Multiplicar" value="x" onclick="guardarValor('*')">
+            <input type="button" class="btn" id="Uno" value="1" onclick="guardarValor('1')">
+            <input type="button" class="btn" id="Dos" value="2" onclick="guardarValor('2')">
+            <input type="button" class="btn" id="Tres" value="3" onclick="guardarValor('3')">
+            <input type="button" class="btnEspecial" id="Menos" value="-" onclick="guardarValor('-')">
+            <input type="button" class="btn" id="Cero" value="0" onclick="guardarValor('0')">
+            <input type="button" class="btnEspecial" id="Clear" value="C" onclick="borrarTodo()">
+            <input type="button" class="btnEspecial" id="BorrarUltimoDigito" value="<=" onclick="borrarUltimo()">
+            <input type="button" class="btnEspecial" id="Sumar" value="+" onclick="guardarValor('+')">
+            <input type="button" class="btnEspecial" id="Igual" value="=" onclick="calcular()" style="grid-column: span 4;">
         </section>
+        
     </section>
     <script src="js/javascript.js"></script>
 

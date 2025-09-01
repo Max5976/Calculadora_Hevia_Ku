@@ -9,16 +9,13 @@ function guardarValor(valor) {
 }
 
 function guardarResultado() {
-    if (resultado === null || isNaN(resultado)) {
-        pantalla.value = "";
-        pantalla.value += "No es posible guardar algo que no existe."
-        mMasPresionado = false;
-    }
-    else {
-        mMasPresionado = true;
+    if (resultado !== null && !isNaN(resultado)) {
+        memoria = resultado;
+        pantalla.value = "Guardado en memoria: " + memoria;
+    } else {
+        pantalla.value = "Nada que guardar";
     }
 }
-
 function guardarRes() {
     if (resultado === null || isNaN(resultado)) {
         pantalla.value = "";
@@ -38,7 +35,7 @@ function calcular(){
         resultado = eval(pantalla.value);
         if (resultado === null || isNaN(resultado)) {
             pantalla.value = "";
-            pantalla.value += "Error";
+            pantalla.value += "Error";t
             if (mMasPresionado === true) {
                 guardarRes();
             }
@@ -51,5 +48,24 @@ function calcular(){
             }
         }
     }
+    
 }
-
+function borrarUltimo() {
+    let texto = pantalla.value;
+    let nuevoTexto = "";
+    for (let i = 0; i < texto.length - 1; i++) {
+        nuevoTexto += texto[i];
+    }
+    pantalla.value = nuevoTexto;
+}
+function usarMemoria() {
+    if (memoria !== null) {
+        pantalla.value += memoria;
+    } else {
+        pantalla.value = "Memoria vacía";
+    }
+}
+function borrarTodo() {
+    pantalla.value = "";
+    resultado = null;
+}
